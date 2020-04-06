@@ -7,31 +7,35 @@ This is the EFI I am using for my Hackintosh computer. Currently based on Openco
 - CPU: Core i5 9600K
 - Motherboard: Asrock Z390 Phantom Gaming ITX/AC
 - RAM: G.Skill Ripjaws V DDR4 3200 16Gx2
-- Graphics card: Sapphire Radeon Pulse 5500 XT
+- Graphics card: Sapphire Radeon RX 5500 XT Pulse
 - SSD: Western Digital Black SN750 512GB
 - Wireless + Bluetooth: BCM94360CS2
 
 ## Versions
 
-- macOS 10.15.3
+- macOS 10.15.4
 - Opencore 0.5.7
 
 ## What works
 
-- Discrete graphics for main display and and iGPU for Sidecar
+- Discrete graphics for main display and and iGPU for accelerating
 - Sleep and wake
 - Bluetooth
 - Wi-Fi
+- Ethernet
 - Sound:
   - Front panel
   - Rear panel
   - USB sound card
   - Display port sound out
 - Apple stuff:
-  - iServices
+  - AirDrop
+  - iMessage and FaceTime
   - Handoff
-  - Clipboard
+  - Instant Hotspot
+  - Universal Clipboard
   - Sidecar
+  - Continuity Camera
 
 ## What doesn't work
 
