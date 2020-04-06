@@ -66,7 +66,7 @@
 			<key>AvoidRuntimeDefrag</key>
 			<true/>
 			<key>DevirtualiseMmio</key>
-			<false/>
+			<true/>
 			<key>DisableSingleUser</key>
 			<false/>
 			<key>DisableVariableWrite</key>
@@ -79,20 +79,22 @@
 			<true/>
 			<key>ForceExitBootServices</key>
 			<false/>
-			<key>ProtectCsmRegion</key>
+			<key>ProtectMemoryRegions</key>
 			<false/>
 			<key>ProtectSecureBoot</key>
 			<false/>
 			<key>ProtectUefiServices</key>
-			<false/>
-			<key>ProvideCustomSlide</key>
-			<false/>
-			<key>SetupVirtualMap</key>
 			<true/>
-			<key>ShrinkMemoryMap</key>
+			<key>ProvideCustomSlide</key>
+			<true/>
+			<key>RebuildAppleMemoryMap</key>
+			<true/>
+			<key>SetupVirtualMap</key>
 			<false/>
 			<key>SignalAppleOS</key>
 			<false/>
+			<key>SyncRuntimePermissions</key>
+			<true/>
 		</dict>
 	</dict>
 	<key>DeviceProperties</key>
@@ -112,7 +114,7 @@
 				<key>layout-id</key>
 				<data>BwAAAA==</data>
 				<key>model</key>
-				<string>Cannon Lake PCH cAVS</string>
+				<string>100 Series/C230 Series Chipset Family HD Audio Controller</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
@@ -555,11 +557,13 @@
 			<key>HibernateMode</key>
 			<string>None</string>
 			<key>PickerMode</key>
-			<string>Builtin</string>
+			<string>External</string>
 			<key>HideAuxiliary</key>
 			<false/>
 			<key>HideSelf</key>
 			<true/>
+			<key>ConsoleAttributes</key>
+			<integer>0</integer>
 			<key>PickerAttributes</key>
 			<integer>0</integer>
 			<key>PickerAudioAssist</key>
@@ -612,7 +616,7 @@
 			<key>AuthRestart</key>
 			<false/>
 			<key>ExposeSensitiveData</key>
-			<integer>11</integer>
+			<integer>2</integer>
 			<key>HaltLevel</key>
 			<integer>2147483648</integer>
 			<key>Vault</key>
@@ -628,27 +632,13 @@
 				<key>Auxiliary</key>
 				<false/>
 				<key>Name</key>
-				<string>FwProtect.efi</string>
+				<string>UEFI Shell</string>
 				<key>Comment</key>
-				<string>FwProtect.efi</string>
+				<string>OpenShell.efi</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>FwProtect.efi</string>
-			</dict>
-			<dict>
-				<key>Arguments</key>
-				<string></string>
-				<key>Auxiliary</key>
-				<false/>
-				<key>Name</key>
-				<string>VerifyMsrE2.efi</string>
-				<key>Comment</key>
-				<string>VerifyMsrE2.efi</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>VerifyMsrE2.efi</string>
+				<string>OpenShell.efi</string>
 			</dict>
 		</array>
 	</dict>
@@ -666,7 +656,7 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>boot-args</key>
-				<string>-v slide=1 darkwake=0 agdpmod=pikera debug=0x100 keepsyms=1</string>
+				<string>-v darkwake=0 agdpmod=pikera debug=0x100 keepsyms=1</string>
 				<key>csr-active-config</key>
 				<data>AAAAAA==</data>
 				<key>prev-lang:kbd</key>
@@ -687,6 +677,8 @@
 				<string>boot-args</string>
 			</array>
 		</dict>
+		<key>LegacyOverwrite</key>
+		<false/>
 		<key>LegacyEnable</key>
 		<false/>
 		<key>WriteFlash</key>
@@ -729,8 +721,9 @@
 		<key>Drivers</key>
 		<array>
 			<string>ApfsDriverLoader.efi</string>
-			<string>FwRuntimeServices.efi</string>
+			<string>OpenRuntime.efi</string>
 			<string>HFSPlus.efi</string>
+			<string>OpenCanopy.efi</string>
 		</array>
 		<key>Audio</key>
 		<dict>
@@ -810,7 +803,7 @@
 			<key>AppleKeyMap</key>
 			<false/>
 			<key>AppleSmcIo</key>
-			<true/>
+			<false/>
 			<key>AppleUserInterfaceTheme</key>
 			<false/>
 			<key>DataHub</key>
