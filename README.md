@@ -14,7 +14,7 @@ This is the EFI I am using for my Hackintosh computer. Currently based on Openco
 ## Versions
 
 - macOS 10.15.4
-- Opencore 0.5.7
+- Opencore 0.5.8
 
 ## What works
 
