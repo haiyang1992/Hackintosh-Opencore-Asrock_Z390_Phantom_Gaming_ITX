@@ -47,7 +47,7 @@
 				<string>SSDT-TbtOnPch.aml</string>
 			</dict>
 		</array>
-		<key>Block</key>
+		<key>Delete</key>
 		<array>
 		</array>
 		<key>Patch</key>
@@ -96,9 +96,9 @@
 			<key>ProvideCustomSlide</key>
 			<true/>
 			<key>RebuildAppleMemoryMap</key>
-			<true/>
-			<key>SetupVirtualMap</key>
 			<false/>
+			<key>SetupVirtualMap</key>
+			<true/>
 			<key>SignalAppleOS</key>
 			<false/>
 			<key>SyncRuntimePermissions</key>
@@ -200,13 +200,8 @@
 				<string>Ethernet Connection (7) I219-V</string>
 			</dict>
 		</dict>
-		<key>Block</key>
-		<dict>
-			<key>PciRoot(0x0)/Pci(0x1b,0x0)</key>
-			<array>
-				<string>MaximumBootBeepVolume</string>
-			</array>
-		</dict>
+		<key>Delete</key>
+		<dict/>
 	</dict>
 	<key>Kernel</key>
 	<dict>
@@ -312,22 +307,6 @@
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
-				<false/>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>BundlePath</key>
-				<string>IOElectrify.kext</string>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/IOElectrify</string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
 				<true/>
 				<key>MaxKernel</key>
 				<string></string>
@@ -360,7 +339,7 @@
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -382,7 +361,37 @@
 				<key>MinKernel</key>
 				<string></string>
 				<key>BundlePath</key>
+				<string>USBPorts.kext</string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>BundlePath</key>
 				<string>USBPower.kext</string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<false/>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>BundlePath</key>
+				<string>IOElectrify.kext</string>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/IOElectrify</string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -556,8 +565,6 @@
 			<string>External</string>
 			<key>HideAuxiliary</key>
 			<false/>
-			<key>HideSelf</key>
-			<true/>
 			<key>ConsoleAttributes</key>
 			<integer>0</integer>
 			<key>PickerAttributes</key>
@@ -585,6 +592,8 @@
 			<integer>2147483650</integer>
 			<key>Target</key>
 			<integer>3</integer>
+			<key>ApplePanic</key>
+			<false/>
 		</dict>
 		<key>Entries</key>
 		<array>
@@ -621,6 +630,8 @@
 			<integer>0</integer>
 			<key>BootProtect</key>
 			<string>Bootstrap</string>
+			<key>BlacklistAppleUpdate</key>
+			<true/>
 		</dict>
 		<key>Tools</key>
 		<array>
@@ -673,7 +684,7 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>boot-args</key>
-				<string>-v darkwake=0 agdpmod=pikera debug=0x100 keepsyms=1</string>
+				<string>darkwake=0 agdpmod=pikera debug=0x100 keepsyms=1</string>
 				<key>csr-active-config</key>
 				<data>AAAAAA==</data>
 				<key>prev-lang:kbd</key>
@@ -682,7 +693,7 @@
 				<data>Rg==</data>
 			</dict>
 		</dict>
-		<key>Block</key>
+		<key>Delete</key>
 		<dict>
 			<key>4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14</key>
 			<array>
@@ -799,8 +810,6 @@
 			<true/>
 			<key>DirectGopRendering</key>
 			<false/>
-			<key>DirectGopCacheMode</key>
-			<string></string>
 			<key>ReconnectOnResChange</key>
 			<false/>
 			<key>ReplaceTabWithSpace</key>
@@ -849,12 +858,14 @@
 			<false/>
 			<key>ReleaseUsbOwnership</key>
 			<false/>
-			<key>RequestBootVarFallback</key>
-			<true/>
 			<key>RequestBootVarRouting</key>
 			<true/>
 			<key>UnblockFsConnect</key>
 			<false/>
+			<key>DeduplicateBootOrder</key>
+			<true/>
+			<key>TscSyncTimeout</key>
+			<integer>0</integer>
 		</dict>
 		<key>APFS</key>
 		<dict>
