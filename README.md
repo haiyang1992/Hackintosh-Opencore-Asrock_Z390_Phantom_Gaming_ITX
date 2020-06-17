@@ -13,8 +13,8 @@ This is the EFI I am using for my Hackintosh computer. Currently based on Openco
 
 ## Versions
 
-- macOS 10.15.4
-- OpenCore 0.5.8
+- macOS 10.15.5
+- OpenCore 0.5.9
 
 ## What works
 
@@ -39,10 +39,26 @@ This is the EFI I am using for my Hackintosh computer. Currently based on Openco
 
 ## What doesn't work
 
-Thunderbolt probably doesn't. I don't have a TB3 device for testing. Right now I can use it for USB Type-C charging.
+Thunderbolt 3 is finicky. See below.
 
-### Update 5/6/2020:
-Added SSDT-TbtOnPch.aml from [fangf2018](https://github.com/fangf2018/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh). By default this SSDT and IOElectrify.kext are disabled in the config.plist. Enabling them will turn on support for Thunderbolt 3 and USB-C hotplug. However this causes a series of ACPI errors and will slow down boot time. Since I don't use the port on a regular basis I've left them disabled.
+### Update 6/17/2020:
+Following the blog post from [fangf2018](https://fangf.cc/2020/05/19/TB3/), the Thunderbolt 3 controller is able to
+show up in System Informations. USB-C also works. This involves 1) flashing the BIOS to a specific version, which is
+found from a [thread](https://www.tonymacx86.com/threads/success-asrock-z390-phantom-gaming-itx-tb3-igpu-mojave-sff-build.277418/page-81)
+on tonymacx86.com and 2) upgrading the Thunderbolt firmware under Windows.
+
+However this method currently has two problems. Booting Windows from Opencore will result in a BSOD with an ACPI error.
+This also breaks sleep under macOS. The computer wakes up into a black screen and upon a hard reset a kernel panic
+error is generated. This seems to be caused by a bug in the provided `SSDT-TbtOnPch.aml` and AMD Navi graphics cards.
+To test out this functionality make sure to enable both `SSDT-TbtOnPch.aml` and `SSDT-DTPG.aml`, disable `SSDT-USBC.aml`
+and follow the instructions in the above link to flash the BIOS and firmware.
+
+~~### Update 5/6/2020:~~
+~~Added SSDT-TbtOnPch.aml from [fangf2018](https://github.com/fangf2018/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh).
+By default this SSDT and IOElectrify.kext are disabled in the config.plist.
+Enabling them will turn on support for Thunderbolt 3 and USB-C hotplug.
+However this causes a series of ACPI errors and will slow down boot time.
+Since I don't use the port on a regular basis I've left them disabled.~~
 
 ## Notes
 
