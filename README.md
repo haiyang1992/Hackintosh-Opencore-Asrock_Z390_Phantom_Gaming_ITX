@@ -1,6 +1,6 @@
 # Hackintosh-Opencore-Asrock_Z390_Phantom_Gaming_ITX
 
-This is the EFI I am using for my Hackintosh computer. Currently based on Opencore 0.5.8.
+This is the EFI I am using for my Hackintosh computer. Currently based on Opencore 0.5.9.
 
 ## System Specs
 
