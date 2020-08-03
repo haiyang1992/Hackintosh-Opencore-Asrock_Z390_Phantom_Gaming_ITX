@@ -145,6 +145,8 @@
 			<false/>
 			<key>SyncRuntimePermissions</key>
 			<true/>
+			<key>ProvideMaxSlide</key>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>DeviceProperties</key>
@@ -192,7 +194,7 @@
 				<key>hda-gfx</key>
 				<string>onboard-0</string>
 				<key>model</key>
-				<string>Radeon RX 5500 XT</string>
+				<string>Radeon RX 5700 XT</string>
 				<key>shikigva</key>
 				<integer>80</integer>
 			</dict>
@@ -203,7 +205,7 @@
 				<key>device_type</key>
 				<string>Audio device</string>
 				<key>model</key>
-				<string>Radeon RX 5500 XT HDMI Audio</string>
+				<string>Radeon RX 5700 XT HDMI Audio</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1B,0x0)/Pci(0x0,0x0)</key>
 			<dict>
@@ -636,6 +638,10 @@
 			<integer>3</integer>
 			<key>ApplePanic</key>
 			<false/>
+			<key>SerialInit</key>
+			<false/>
+			<key>SysReport</key>
+			<false/>
 		</dict>
 		<key>Entries</key>
 		<array>
@@ -672,8 +678,6 @@
 			<integer>0</integer>
 			<key>BootProtect</key>
 			<string>Bootstrap</string>
-			<key>BlacklistAppleUpdate</key>
-			<true/>
 		</dict>
 		<key>Tools</key>
 		<array>
@@ -726,13 +730,15 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>boot-args</key>
-				<string>darkwake=0 agdpmod=pikera debug=0x100 keepsyms=1</string>
+				<string>darkwake=0 agdpmod=pikera debug=0x100 keepsyms=1 igfxmetal=1</string>
 				<key>csr-active-config</key>
 				<data>AAAAAA==</data>
 				<key>prev-lang:kbd</key>
 				<string>en-US:0</string>
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
+				<key>run-efi-updater</key>
+				<false/>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -858,6 +864,8 @@
 			<false/>
 			<key>SanitiseClearScreen</key>
 			<false/>
+			<key>UgaPassThrough</key>
+			<false/>
 		</dict>
 		<key>ProtocolOverrides</key>
 		<dict>
@@ -891,6 +899,8 @@
 			<false/>
 			<key>AppleRtcRam</key>
 			<false/>
+			<key>AppleFramebufferInfo</key>
+			<false/>
 		</dict>
 		<key>Quirks</key>
 		<dict>
@@ -921,6 +931,8 @@
 			<integer>0</integer>
 			<key>MinVersion</key>
 			<integer>0</integer>
+			<key>GlobalConnect</key>
+			<false/>
 		</dict>
 		<key>ReservedMemory</key>
 		<array>

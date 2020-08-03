@@ -1,20 +1,20 @@
 # Hackintosh-Opencore-Asrock_Z390_Phantom_Gaming_ITX
 
-This is the EFI I am using for my Hackintosh computer. Currently based on Opencore 0.5.9.
+This is the EFI I am using for my Hackintosh computer. Currently based on Opencore 0.6.0.
 
 ## System Specs
 
 - CPU: Core i5 9600K
 - Motherboard: Asrock Z390 Phantom Gaming ITX/AC
 - RAM: G.Skill Ripjaws V DDR4 3200 16Gx2
-- Graphics card: Sapphire Radeon RX 5500 XT Pulse
+- Graphics card: Gigabyte Radeon RX 5700 XT Gaming OC
 - SSD: Western Digital Black SN750 512GB
 - Wireless + Bluetooth: BCM94360CS2
 
 ## Versions
 
-- macOS 10.15.5
-- OpenCore 0.5.9
+- macOS 10.15.6
+- OpenCore 0.6.0
 
 ## What works
 
