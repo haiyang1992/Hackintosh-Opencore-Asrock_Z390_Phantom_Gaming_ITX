@@ -463,6 +463,42 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>BundlePath</key>
+				<string>CPUFriend.kext</string>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/CPUFriend</string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+				<key>Arch</key>
+				<string>x86_64</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>BundlePath</key>
+				<string>CPUFriendDataProvider.kext</string>
+				<key>ExecutablePath</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+				<key>Arch</key>
+				<string>x86_64</string>
+			</dict>
 		</array>
 		<key>Emulate</key>
 		<dict>
@@ -470,6 +506,8 @@
 			<data></data>
 			<key>Cpuid1Mask</key>
 			<data></data>
+			<key>DummyPowerManagement</key>
+			<false/>
 		</dict>
 		<key>Patch</key>
 		<array>
@@ -608,8 +646,6 @@
 			<false/>
 			<key>DisableIoMapper</key>
 			<false/>
-			<key>DummyPowerManagement</key>
-			<false/>
 			<key>ExternalDiskIcons</key>
 			<false/>
 			<key>IncreasePciBarSize</key>
@@ -617,7 +653,7 @@
 			<key>LapicKernelPanic</key>
 			<false/>
 			<key>PanicNoKextDump</key>
-			<false/>
+			<true/>
 			<key>PowerTimeoutKernelPanic</key>
 			<true/>
 			<key>ThirdPartyDrives</key>
@@ -627,6 +663,10 @@
 			<key>DisableRtcChecksum</key>
 			<false/>
 			<key>DisableLinkeditJettison</key>
+			<true/>
+			<key>ExtendBTFeatureFlags</key>
+			<false/>
+			<key>LegacyCommpage</key>
 			<false/>
 		</dict>
 		<key>Scheme</key>
@@ -839,6 +879,10 @@
 			<string>C02Y9UY1JV3Q</string>
 			<key>SystemUUID</key>
 			<string>30516442-40ED-4DD9-A6CD-CAE9789F7B09</string>
+			<key>SystemMemoryStatus</key>
+			<string>Auto</string>
+			<key>ProcessorType</key>
+			<integer>0</integer>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
