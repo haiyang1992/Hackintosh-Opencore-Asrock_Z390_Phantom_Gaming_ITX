@@ -137,6 +137,8 @@
 			<true/>
 			<key>ProvideCustomSlide</key>
 			<true/>
+			<key>ProvideMaxSlide</key>
+			<integer>0</integer>
 			<key>RebuildAppleMemoryMap</key>
 			<true/>
 			<key>SetupVirtualMap</key>
@@ -145,8 +147,6 @@
 			<false/>
 			<key>SyncRuntimePermissions</key>
 			<true/>
-			<key>ProvideMaxSlide</key>
-			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>DeviceProperties</key>
@@ -197,6 +197,8 @@
 				<string>Radeon RX 5700 XT</string>
 				<key>shikigva</key>
 				<integer>80</integer>
+				<key>CFG,CFG_USE_AGDC</key>
+				<data>AA==</data>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x1)</key>
 			<dict>
@@ -646,11 +648,21 @@
 			<false/>
 			<key>DisableIoMapper</key>
 			<false/>
+			<key>DisableLinkeditJettison</key>
+			<true/>
+			<key>DisableRtcChecksum</key>
+			<false/>
+			<key>ExtendBTFeatureFlags</key>
+			<false/>
 			<key>ExternalDiskIcons</key>
+			<false/>
+			<key>ForceSecureBootScheme</key>
 			<false/>
 			<key>IncreasePciBarSize</key>
 			<false/>
 			<key>LapicKernelPanic</key>
+			<false/>
+			<key>LegacyCommpage</key>
 			<false/>
 			<key>PanicNoKextDump</key>
 			<true/>
@@ -659,14 +671,6 @@
 			<key>ThirdPartyDrives</key>
 			<false/>
 			<key>XhciPortLimit</key>
-			<false/>
-			<key>DisableRtcChecksum</key>
-			<false/>
-			<key>DisableLinkeditJettison</key>
-			<true/>
-			<key>ExtendBTFeatureFlags</key>
-			<false/>
-			<key>LegacyCommpage</key>
 			<false/>
 		</dict>
 		<key>Scheme</key>
@@ -686,18 +690,18 @@
 		</array>
 		<key>Boot</key>
 		<dict>
-			<key>HibernateMode</key>
-			<string>None</string>
-			<key>PickerMode</key>
-			<string>External</string>
-			<key>HideAuxiliary</key>
-			<false/>
 			<key>ConsoleAttributes</key>
 			<integer>0</integer>
+			<key>HibernateMode</key>
+			<string>None</string>
+			<key>HideAuxiliary</key>
+			<false/>
 			<key>PickerAttributes</key>
 			<integer>1</integer>
 			<key>PickerAudioAssist</key>
 			<false/>
+			<key>PickerMode</key>
+			<string>External</string>
 			<key>PollAppleHotKeys</key>
 			<false/>
 			<key>ShowPicker</key>
@@ -711,20 +715,20 @@
 		<dict>
 			<key>AppleDebug</key>
 			<false/>
+			<key>ApplePanic</key>
+			<false/>
 			<key>DisableWatchDog</key>
 			<false/>
 			<key>DisplayDelay</key>
 			<integer>0</integer>
 			<key>DisplayLevel</key>
 			<integer>2147483650</integer>
-			<key>Target</key>
-			<integer>3</integer>
-			<key>ApplePanic</key>
-			<false/>
 			<key>SerialInit</key>
 			<false/>
 			<key>SysReport</key>
 			<false/>
+			<key>Target</key>
+			<integer>3</integer>
 		</dict>
 		<key>Entries</key>
 		<array>
@@ -749,30 +753,30 @@
 			<true/>
 			<key>AllowSetDefault</key>
 			<true/>
+			<key>ApECID</key>
+			<integer>0</integer>
 			<key>AuthRestart</key>
+			<false/>
+			<key>BootProtect</key>
+			<string>Bootstrap</string>
+			<key>DmgLoading</key>
+			<string>Signed</string>
+			<key>EnablePassword</key>
 			<false/>
 			<key>ExposeSensitiveData</key>
 			<integer>2</integer>
 			<key>HaltLevel</key>
 			<integer>2147483648</integer>
-			<key>Vault</key>
-			<string>Optional</string>
-			<key>ScanPolicy</key>
-			<integer>0</integer>
-			<key>BootProtect</key>
-			<string>Bootstrap</string>
-			<key>ApECID</key>
-			<integer>0</integer>
-			<key>DmgLoading</key>
-			<string>Signed</string>
-			<key>EnablePassword</key>
-			<false/>
 			<key>PasswordHash</key>
 			<data></data>
 			<key>PasswordSalt</key>
 			<data></data>
+			<key>ScanPolicy</key>
+			<integer>0</integer>
 			<key>SecureBootModel</key>
 			<string>Default</string>
+			<key>Vault</key>
+			<string>Optional</string>
 		</dict>
 		<key>Tools</key>
 		<array>
@@ -863,26 +867,28 @@
 	<dict>
 		<key>Automatic</key>
 		<true/>
+		<key>CustomMemory</key>
+		<false/>
 		<key>Generic</key>
 		<dict>
 			<key>AdviseWindows</key>
 			<false/>
 			<key>MLB</key>
 			<string>C02908102GULNV91F</string>
+			<key>ProcessorType</key>
+			<integer>0</integer>
 			<key>ROM</key>
 			<data>qKFZDRyL</data>
 			<key>SpoofVendor</key>
 			<true/>
+			<key>SystemMemoryStatus</key>
+			<string>Auto</string>
 			<key>SystemProductName</key>
 			<string>iMac19,1</string>
 			<key>SystemSerialNumber</key>
 			<string>C02Y9UY1JV3Q</string>
 			<key>SystemUUID</key>
 			<string>30516442-40ED-4DD9-A6CD-CAE9789F7B09</string>
-			<key>SystemMemoryStatus</key>
-			<string>Auto</string>
-			<key>ProcessorType</key>
-			<integer>0</integer>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
@@ -964,6 +970,8 @@
 			<key>SanitiseClearScreen</key>
 			<false/>
 			<key>UgaPassThrough</key>
+			<false/>
+			<key>ForceResolution</key>
 			<false/>
 		</dict>
 		<key>ProtocolOverrides</key>
