@@ -1,6 +1,6 @@
 # Hackintosh-Opencore-Asrock_Z390_Phantom_Gaming_ITX
 
-This is the EFI I am using for my Hackintosh computer. Currently based on Opencore 0.6.4.
+This is the EFI I am using for my Hackintosh computer. Currently based on Opencore 0.6.6.
 
 ## System Specs
 
@@ -13,8 +13,8 @@ This is the EFI I am using for my Hackintosh computer. Currently based on Openco
 
 ## Versions
 
-- macOS 10.15.7
-- OpenCore 0.6.4
+- macOS 11.2 Big Sur
+- OpenCore 0.6.6
 
 ## What works
 
@@ -40,6 +40,10 @@ This is the EFI I am using for my Hackintosh computer. Currently based on Openco
 ## What doesn't work
 
 Thunderbolt 3 is finicky. See below.
+
+### Update 2/2/2021
+The upgrade to Big Sur was smooth. Although sometimes I will get a blackscreen followed by a kernel panic and system reboot.
+This seems to be a bug with Apple's Navi GPU driver and not with WEG or Opencore.
 
 ### Update 6/17/2020:
 Following the blog post from [fangf2018](https://fangf.cc/2020/05/19/TB3/), the Thunderbolt 3 controller is able to
