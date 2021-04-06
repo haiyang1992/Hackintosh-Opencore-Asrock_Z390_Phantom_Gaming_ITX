@@ -13,8 +13,8 @@ This is the EFI I am using for my Hackintosh computer. Currently based on Openco
 
 ## Versions
 
-- macOS 11.2 Big Sur
-- OpenCore 0.6.6
+- macOS 11.2.3 Big Sur
+- OpenCore 0.6.8
 
 ## What works
 
