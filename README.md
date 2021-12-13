@@ -13,8 +13,8 @@ This is the EFI I am using for my Hackintosh computer. Currently based on Openco
 
 ## Versions
 
-- macOS 11.6 Big Sur
-- OpenCore 0.7.4
+- macOS 12.0.1 Monterey
+- OpenCore 0.7.6
 
 ## What works
 
@@ -40,6 +40,9 @@ This is the EFI I am using for my Hackintosh computer. Currently based on Openco
 ## What doesn't work
 
 Thunderbolt 3 is finicky. See below.
+
+### Update 12/13/2021
+The upgrade to Monterey went through fine.
 
 ### Update 2/2/2021
 The upgrade to Big Sur was smooth. Although sometimes I will get a blackscreen followed by a kernel panic and system reboot.
